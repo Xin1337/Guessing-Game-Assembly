@@ -1,0 +1,11 @@
+#map
+map
+*.map
+
+#exe
+exe
+*.exe
+
+#obj
+obj
+*.obj
