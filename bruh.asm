@@ -163,7 +163,7 @@ timer Proc near
   x:    
         mov  f, 0
   x1:   
-        inc  f           ; increament
+        inc  f           ; increment
         cmp  f, 0fffh     ; compare
         jne  x1
         inc  s
