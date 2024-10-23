@@ -3,7 +3,7 @@
 .data
 
   ;Strings
-  wit     db "Hello$"
+  wit     db "Dominic Andutan$"
   chos    db "Choose a number between 1-9$"
   ask3    db "WRONG INPUT$"
   give    db "Please enter your choice:$"
@@ -159,16 +159,16 @@
         int  21h
      
 timer Proc near
-        mov  s, 0
+        mov  s, 0        ; Initialize outer loop counter
   x:    
-        mov  f, 0
+        mov  f, 0        ; Initialize inner loop counter
   x1:   
-        inc  f           ; increment
-        cmp  f, 0fffh     ; compare
-        jne  x1
-        inc  s
-        cmp  s, 00ffh     ; compares here
-        jne  x
-        ret
+        inc  f           ; Increment inner loop counter
+        cmp  f, 0fffh    ; Compare inner loop counter to threshold
+        jne  x1          ; If not reached, jump back to start of inner loop
+        inc  s           ; Increment outer loop counter
+        cmp  s, 00ffh    ; Compare outer loop counter to threshold
+        jne  x           ; If not reached, jump back to start of outer loop
+        ret              ; Return from procedure
 timer endp
 end main
