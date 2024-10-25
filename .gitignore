@@ -9,3 +9,5 @@ exe
 #obj
 obj
 *.obj
+onefort.asm
+half.asm
